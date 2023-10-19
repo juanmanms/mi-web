@@ -9,6 +9,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { Fragment } from 'astro/runtime/server/index.js';
 
 const metadata = {
   title: 'Personal Homepage Demo',
@@ -42,14 +43,13 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
-    actions={[{ variant: "primary", target: '_blank', text: 'Hire me', href: '/' }]}
+    title="Juanmanms"
+    tagline="Datos personales"
+    actions={[{ variant: "primary", target: '_blank', text: 'Contacteme', href: '/' }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree
-      from New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into
-      captivating realities.
+      Soy desarrollador web, con pasión por la Creación y la Innovación  <br /> 
+      Crear herramientas o plataformas que ayuden a mejorar nuestra comunicación y funcionamientos para que mejore la calidad de nuestra vida y trabajo.
     </Fragment>
   </Hero>
 
@@ -60,23 +60,23 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
+          text: 'Linkedin',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:brand-instagram',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
+          text: 's',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:brand-github',
         callToAction: {
           target: '_blank',
           text: 'Pinterest',
@@ -90,18 +90,16 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mi</h3>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Soy un apasionado desarrollador web con una sólida experiencia en la creación de sitios y aplicaciones atractivas y funcionales. Mi enfoque se centra en la usabilidad, el diseño limpio y el rendimiento óptimo. 
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        Estoy comprometido a mantenerme actualizado con las últimas tecnologías web y siempre estoy buscando nuevas formas de mejorar y superar desafíos
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>Puedes ver más sobre mi en mis redes:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -113,18 +111,24 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Work experience"
+    title="Experiencia laboral"
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Desarrollador especializado<br /> <span class="font-normal">NTT Data</span> <br /> <span class="text-sm font-normal">2023 - Actualidad</span>',
+        description: `Desrrollo de proyectos antes`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Desarrollador fullstack<br /> <span class="font-normal">Freelance</span> <br /> <span class="text-sm font-normal">2020 - Actualidad</span>',
+        description: `Desarrollar soluciones de empresa, que incluyen API's, Fron y paneles de administrador. <br /> Ejecutar diseños de photoshop, figma y otros.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Desarrollador Prestashop <br /> <span class="font-normal">FreelanceCA</span> <br /> <span class="text-sm font-normal">2012 - 2020</span>',
+        description: `Creación, modificacion y confiración de diferentes temas y modulos para tiendas online generadas con prestashop. Conexiones y soporte de las mismas con diferentes ERP's`,
         icon: 'tabler:briefcase',
       },
     ]}
