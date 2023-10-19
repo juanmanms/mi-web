@@ -71,7 +71,7 @@ const metadata = {
         icon: 'tabler:brand-instagram',
         callToAction: {
           target: '_blank',
-          text: 's',
+          text: 'Instagram',
           href: '#',
         },
       },
@@ -79,15 +79,12 @@ const metadata = {
         icon: 'tabler:brand-github',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
+          text: 'Github',
           href: '#',
         },
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Colorful Image',
-    }}
+    image={{ src: '~/assets/images/yo.jpg', alt: 'Mi foto' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mi</h3>
@@ -139,16 +136,20 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Education"
+    title="Educación"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        title: `FP. Desarrollo de aplicaciones web <br /> <span class="font-normal">IES Abastos/span> <br /> <span class="text-sm font-normal">2008 - 2010</span>`,
         icon: 'tabler:school',
       },
       {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `FP. Desarrollo de aplicaciones multiplataforma <br /> <span class="font-normal">IES Fuente San Luis/span> <br /> <span class="text-sm font-normal">2010 - 2012</span>`,
         icon: 'tabler:school',
       },
+      {
+        title: `FP. Administración de Sistemas <br /> <span class="font-normal">IES Ausias March/span> <br /> <span class="text-sm font-normal">2008 - 2010</span>`,
+        icon: 'tabler:school',
+      }
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
@@ -156,52 +157,52 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Skills"
+    title="Cualidades"
     subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
-      },
-      {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
-      },
-      {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
-      },
-      {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
-      },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
+    title: 'Desarrollo Front-end y Back-end',
+    description: 'Competente en la creación de la interfaz de usuario (front-end) y el desarrollo de la lógica del servidor y la base de datos (back-end).',
+  },
+  {
+    title: 'Construcción de Aplicaciones Completas',
+    description: 'Capaz de diseñar, desarrollar y mantener aplicaciones web o móviles completas, desde la concepción hasta la implementación.',
+  },
+  {
+    title: 'Lenguajes de Programación',
+    description: 'Dominio de múltiples lenguajes de programación, como JavaScript, Python, Ruby, Java, o C#, para abordar diversas necesidades de desarrollo.',
+  },
+  {
+    title: 'Bases de Datos y Almacenamiento de Datos',
+    description: 'Conocimiento en la gestión de bases de datos y el almacenamiento de datos, incluyendo SQL y NoSQL.',
+  },
+  {
+    title: 'Frameworks y Bibliotecas',
+    description: 'Familiarizado con frameworks y bibliotecas tanto para el front-end ( React, Angular ...) como para el back-end (Node.js, PHP).',
+  },
+  {
+    title: 'Seguridad',
+    description: 'Comprometido con la seguridad de las aplicaciones, implementando prácticas sólidas de protección de datos y prevención de vulnerabilidades.',
+  },
+  {
+    title: 'Optimización y Rendimiento',
+    description: 'Habilidad para optimizar el rendimiento de aplicaciones, minimizar tiempos de carga y garantizar una experiencia del usuario fluida.',
+  },
+  {
+    title: 'Colaboración y Comunicación',
+    description: 'Capaz de trabajar en equipo y comunicar efectivamente con diseñadores, otros desarrolladores y partes interesadas para lograr objetivos comunes.',
+  },
+  {
+    title: 'Resolución de Problemas',
+    description: 'Habilidad para analizar y resolver desafíos técnicos complejos, identificando soluciones efectivas y eficientes.',
+  }
     ]}
   />
 
   <!-- Content Widget **************** -->
-
+<!-- 
   <Content
     id="porfolio"
     title="Elevating visual narratives"
@@ -223,12 +224,7 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
       alt: 'Tech Design Image',
     }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
+    
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -241,7 +237,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+
 
   <Content
     isReversed
@@ -279,7 +275,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+
 
   <Content
     isReversed
@@ -314,11 +310,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  <!-- <Testimonials
     title="Client testimonials"
     subtitle="Discover what clients have to say about their experiences working with me."
     testimonials={[
@@ -377,13 +373,13 @@ const metadata = {
         },
       },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
+    title="Buscas desarrollador"
+    subtitle="Listo para solucionar tus problemas di?"
     actions={[{
       variant:"primary",
       text: 'Hire me',
@@ -393,7 +389,7 @@ const metadata = {
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     id="blog"
     title="Explore my insightful articles on my blog"
     information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
@@ -401,5 +397,5 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </BlogLatestPosts>
+  </BlogLatestPosts> -->
 </Layout>
