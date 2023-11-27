@@ -1,0 +1,462 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+//import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+//import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+//import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Experto en prestahsop',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      links={[
+        {
+          text: 'Home',
+          href: '#',
+        },
+        {
+          text: 'Features',
+          href: '#features',
+        },
+        {
+          text: 'Pricing',
+          href: '#pricing',
+        },
+        {
+          text: 'FAQs',
+          href: '#faq',
+        },
+        {
+          text: 'Blog',
+          href: '#blog',
+        },
+      ]}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Experto en Prestashop"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Contactar', href: 'https://github.com/onwidget/astrowind' },
+      { text: 'Ver más', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Optimiza la experiencia de tu tienda <span class="text-accent dark:text-white highlight">PrestaShop</span> y
+      mejora tus ventas<br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Con un experto en PrestaShop a tu lado, obtienes no solo un mantenimiento en línea, sino una herramienta
+        estratégica para impulsar tus ventas y ofrecer a tus clientes una experiencia de compra inigualable.
+      </span>
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Ventajas de un experto en PrestaShop"
+    subtitle="Descubre el valor que puedes añadir a tu tienda online con un experto en PrestaShop"
+    columns={2}
+    items={[
+      {
+        title: 'Auditorias',
+        description:
+          'Identificamos y corregimos posibles mejoras en usabilidad, velocidad y seguridad, asegurando un rendimiento óptimo. Fortalece la confianza del cliente y maximiza conversiones para impulsar tu éxito comercial.',
+        icon: 'tabler:eyeglass',
+      },
+      {
+        title: 'Manteniento',
+        description: `Optimiza tu tienda online con nuestro servicio de mantenimiento en PrestaShop. Mantén un rendimiento óptimo, seguridad robusta y actualizaciones continuas para que puedas concentrarte en hacer crecer tu negocio mientras nosotros cuidamos de tu plataforma.`,
+        icon: 'tabler:building-monument',
+      },
+      {
+        title: 'Soporte para modulos',
+        description:
+          'Potencia tu tienda con nuestro servicio de actualización y configuración de módulos en PrestaShop. Garantizamos un rendimiento óptimo y la implementación eficiente de nuevas funciones, permitiéndote aprovechar al máximo tu plataforma sin preocupaciones técnicas.',
+        icon: 'tabler:hexagons',
+      },
+      {
+        title: 'Personalización unica',
+        description: `Destaca con configuraciones personalizadas en PrestaShop. Nuestro servicio te ofrece soluciones a medida, asegurando que tu tienda se adapte perfectamente a tus necesidades específicas, proporcionando una experiencia única para tus clientes y un diferencial competitivo para tu negocio.`,
+        icon: 'tabler:adjustments-horizontal',
+      },
+      {
+        title: 'Consultoria de mejoras',
+        description: `Actualiza tu estrategia comercial con nuestra consultoría de mejoras en PrestaShop. Analizamos a fondo tu tienda en línea y proponemos soluciones personalizadas para optimizar la usabilidad, aumentar la conversión y mejorar la experiencia del usuario, proporcionándote un camino claro hacia el crecimiento sostenible de tu negocio.`,
+        icon: 'tabler:stairs',
+      },
+      {
+        title: 'Mejora de metricas de posicionamiento',
+        description: `Mejora la velocidad de tu tienda. Optimizamos métricas clave, como Page Speed, y aplicamos soluciones eficientes para aumentar la eficacia de tu sitio, potenciando así la satisfacción del usuario y las conversiones.`,
+        icon: 'tabler:device-desktop-analytics',
+      },
+      {
+        title: 'Estudio SEO',
+        description: `Potencia tu visibilidad. Analizamos y optimizamos tu sitio web para mejorar tu posicionamiento en los motores de búsqueda, asegurando un mayor alcance y relevancia en línea.`,
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Propuesta/implantación SEM',
+        description: `Maximiza tu presencia digital con nuestra propuesta e implantación SEM. Aumentamos la visibilidad de tu negocio a través de estrategias efectivas de publicidad en buscadores, garantizando resultados inmediatos y un retorno de inversión significativo.`,
+        icon: 'tabler:ad',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Exitos en web"
+    subtitle="Casos de tiendas con exito en PrestaShop"
+    isReversed
+    items={[
+      {
+        title: 'Auditoria completa:',
+        icon: 'tabler:eyeglass',
+        description:
+          'Tras una vulnerabilidad en la pasarela de pago solicito una adutitoria de seguridad y mejoras en la tienda online. Tras valorar las opciones se eligio un mantenimiento mensual para asegurar la seguridad y una actualización de la tienda a la ultima versión de PrestaShop.',
+      },
+      {
+        title: 'Implantación de soluciones:',
+        icon: 'tabler:building-monument',
+        description: `Tras la actualización y a traves del mantemiento hemos conseguido corregir el error de la pasarela de pago, mejorar la opciones del usuario y de la persona encargada de manejar pedidos y stocks, a parte de haber propuesto un conjunto de mejoras que incorporaremos en el futuro junto al mantenimiento mensual.`,
+      },
+    ]}
+    image={{
+      src: 'https://scontent.fvlc5-1.fna.fbcdn.net/v/t39.30808-6/246497003_1046184442839784_1690048893668541103_n.png?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=61kdJIJ-QpsAX9yNP0B&_nc_ht=scontent.fvlc5-1.fna&oh=00_AfBdIizJS4sMm-FFd4cdqj7Mr04_vDMfLSjq7WGC1ZwrNQ&oe=65657F23',
+      alt: 'Autos sin complejos Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">autossincomplejos.es</h3>
+      <h4 class="text-xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">
+        Repuestos para coches sin carnet
+      </h4>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={false}
+    items={[
+      {
+        title: 'Consultoria de mejoras:',
+        icon: 'tabler:360-view',
+        description: `Una tienda tambien antigua pendiente de actualizar pero con el añadido de adaptar un conector que uniese la tienda con Sage 200, además solicitaba una cambio de imagen con un logo nuevo y una mejora en la usabilidad de la tienda.`,
+      },
+      {
+        title: 'Solución:',
+        icon: 'tabler:stairs',
+        description: `Esta tienda ha decidido realizar un mantemiento y una secuencia de mejoras continuas añadiendo funcionalidades que mejoran la experiencia de sus clientes, como nuevos metodos de pago, filtros de busqueda, mejoras en la usabilidad y un largo etc.<br />Además de una conexión estable con Sage 200 para una sincronización que automatiza la mayoria de procesos de la tienda.`,
+      },
+    ]}
+    image={{
+      src: 'https://scontent.fvlc5-1.fna.fbcdn.net/v/t39.30808-6/292719183_437964951673896_2952345050917930134_n.jpg?stp=dst-jpg_s960x960&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Ut9kpYJk4REAX9HfHHt&_nc_ht=scontent.fvlc5-1.fna&oh=00_AfAwsh5R2e9EkDuwrlTKuHbPtCPeEuwWRxQEdV8QQO555A&oe=6565E8D2',
+      alt: 'Jucarsa.es Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Jucarsa.es</h3>
+      <h4 class="text-xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">
+        Comercial de material industrial
+      </h4>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Errores de versiones antiguas:',
+        icon: 'tabler:bug',
+        description: `Esta web tiene una verisón antigua de PrestaShop, que habia sufrido algunos ataques y sin un mantenimiento adecuado que habia dejado al propietario sin acceso correcto al panel de pedidos.`,
+      },
+      {
+        title: 'Correción de errores y mejoras:',
+        description: `Realizamos una limpieza completa de los archivos infectados y bloqueamos el acceso de atacantes, ademas se corrigieron los errores de mantenimiento y esta en proceso de un futura actualización ya que para el propietario no era el mejor momento para realizarla.`,
+      },
+    ]}
+    image={{
+      src: 'https://vivescortadaimport.com/blog-tienda-minerales/apartados/elaboracion-de-la-joyeria-con-mineral/elaboracion-de-la-joyeria-con-mineral.jpg',
+      alt: 'Tienda de minerales Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">crapzetesoros.com</h3>
+      <h4 class="text-xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">
+        Minerales y piedras preciosas online
+      </h4>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        icon: 'tabler:brand-wordpress',
+        title: 'Migración wordpress:',
+        description: `Un tienda Woocommerce que no daba más de si, por la cantidad de visitas que llegaba a tener y tenia otros problemas como la velocidad de carga, la seguridad, usabilidad y sobretodo una conexión estable con SAP Bussines One para una sincronización de stock, pedidos y clientes.`,
+      },
+      {
+        icon: 'tabler:shopping-cart',
+        title: 'Mejoras de Prestashop:',
+        description: `Llevamos acabo una migración de Woocommerce a Prestashop, con grandes mejoras en el soporte de trafico, seguridad y rendimiento. Además de una conexión estable con SAP Bussines One para una sincronización de stock, pedidos y clientes. Una mejora sustacial en la experiencia de usuario y en la gestión de la tienda.`,
+      },
+    ]}
+    image={{
+      src: 'https://media.licdn.com/dms/image/C4D22AQHBFs1h0qUXMQ/feedshare-shrink_800/0/1626158722061?e=2147483647&v=beta&t=PBP70QcGT8ROWwswHYJo_Zqgffw8ga7UONu_60bp9Hw',
+      alt: 'Proveil.es Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Proveil.es</h3>
+      <h4 class="text-xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Fabricantes de mascarillas</h4>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    id="pricing"
+    title="Precios y planes"
+    prices={[
+      {
+        title: 'Gratis',
+        subtitle: '¿Tienes alguna dudao o quieres saber si te puedo ayudar?',
+        price: '0',
+        period: '/ consulta',
+        callToAction: {
+          target: '_blank',
+          text: 'Consulta gratuita',
+          href: '#',
+        },
+      },
+
+      {
+        title: 'Mantenimiento y asesoramiento',
+        subtitle: 'Actualización, revisión y configuración de modulos',
+        price: 30,
+        period: '/ Mes',
+        callToAction: {
+          target: '_blank',
+          text: 'Contratar',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Auditoria y consultoría',
+        subtitle: 'Oferta de pack de estudio de mejoras',
+        price: 50,
+        period: '/ Informe',
+        callToAction: {
+          target: '_blank',
+          text: 'Ver más información',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faq"
+    title="Preguntas frecuentes"
+    items={[
+      {
+        title: '¿Puedes actualizar mi prestashop?',
+        description:
+          'Claro, puedo ayudarte con la actualización de tu tienda PrestaShop. Las actualizaciones son esenciales para garantizar que tu tienda en línea esté utilizando la última versión del software, lo que no solo proporciona nuevas características, sino que también aborda posibles problemas de seguridad y mejora el rendimiento general.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Qué es PrestaShop y por qué debería elegirlo para mi tienda en línea?',
+        description:
+          'PrestaShop es una plataforma de comercio electrónico de código abierto que permite a los propietarios de tiendas crear y gestionar tiendas en línea de manera efectiva. Es una elección popular por su flexibilidad, amplia variedad de características y comunidad activa. PrestaShop proporciona una interfaz intuitiva, herramientas de gestión de productos avanzadas y una amplia variedad de extensiones para personalizar y ampliar la funcionalidad de tu tienda.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: '¿Cómo puedo instalar PrestaShop en mi servidor?',
+        description:
+          'La instalación de PrestaShop es relativamente sencilla. Puedes descargar la última versión desde el sitio oficial, subir los archivos a tu servidor y seguir el asistente de instalación que te guiará a través de la configuración básica. Asegúrate de tener una base de datos MySQL creada y la información de conexión a mano durante el proceso.',
+        icon: 'tabler:cloud-download',
+      },
+      {
+        title:
+          '¿Cuáles son las principales características de PrestaShop que benefician a los propietarios de tiendas en línea?',
+        description:
+          'PrestaShop ofrece características como gestión de productos, carritos de compra, métodos de pago y envío flexibles, análisis de ventas, descuentos y una amplia variedad de extensiones. Su interfaz intuitiva y amigable facilita la administración de la tienda para los propietarios, mientras que la escalabilidad permite adaptarse a diferentes tamaños de negocios.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: '¿Puedo personalizar el diseño de mi tienda PrestaShop? ¿Cómo lo hago?',
+        description:
+          'Sí, puedes personalizar completamente el diseño de tu tienda PrestaShop. Puedes elegir entre una variedad de temas prediseñados o crear uno propio. PrestaShop utiliza plantillas Smarty, y puedes modificar CSS y HTML directamente o utilizar el personalizador de temas integrado para realizar cambios visuales.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: '¿PrestaShop es adecuado para tiendas pequeñas o solo para empresas grandes?',
+        description:
+          'PrestaShop es adecuado tanto para pequeñas como para grandes empresas. Su versatilidad y escalabilidad permiten que se adapte a negocios de diferentes tamaños y niveles de complejidad.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: '¿Cómo gestiono los productos y categorías en PrestaShop?',
+        description:
+          'La gestión de productos y categorías en PrestaShop es fácil. Puedes añadir productos, definir atributos, establecer precios y gestionar el inventario a través del panel de administración. Las categorías ayudan a organizar productos y facilitan la navegación para los clientes.',
+        icon: 'tabler:box',
+      },
+      {
+        title: '¿Es posible integrar módulos y extensiones de terceros en PrestaShop? ¿Cómo lo hago?',
+        description:
+          'Sí, PrestaShop tiene un mercado de módulos y extensiones donde puedes encontrar una amplia variedad de funcionalidades adicionales. Puedes instalar módulos directamente desde el panel de administración o cargándolos manualmente.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: '¿PrestaShop es compatible con varios métodos de pago y envío?',
+        description:
+          'Sí, PrestaShop es compatible con una amplia variedad de métodos de pago y opciones de envío. Puedes configurar pasarelas de pago populares y ofrecer múltiples opciones de envío para satisfacer las necesidades de tus clientes.',
+        icon: 'tabler:credit-card',
+      },
+      {
+        title: '¿Qué medidas de seguridad se deben tomar para proteger mi tienda PrestaShop?',
+        description:
+          'Para proteger tu tienda, asegúrate de mantener PrestaShop y sus extensiones actualizadas, utiliza una conexión segura (SSL), establece permisos adecuados en el servidor, realiza copias de seguridad periódicas y utiliza medidas de seguridad adicionales como firewalls.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: '¿Cómo puedo migrar datos de una plataforma diferente a PrestaShop?',
+        description:
+          'La migración de datos generalmente implica exportar datos desde tu plataforma actual y luego importarlos en PrestaShop. Hay herramientas y servicios disponibles para ayudarte con este proceso, asegurándote de que la información es transferida de manera segura y eficiente.',
+        icon: 'tabler:lifebuoy',
+      },
+      {
+        title: '¿Es posible gestionar múltiples tiendas desde una única instalación de PrestaShop?',
+        description:
+          'Sí, PrestaShop permite gestionar múltiples tiendas desde una sola instalación. Puedes configurar tiendas adicionales con diferentes dominios, idiomas y monedas desde el panel de administración.',
+        icon: 'tabler:star',
+      },
+      {
+        title: '¿Puedo gestionar mis pedidos y clientes de manera eficiente en PrestaShop?',
+        description:
+          'Sí, PrestaShop proporciona herramientas para gestionar pedidos y clientes de manera eficiente. Puedes ver y procesar pedidos, realizar seguimiento de inventario, y utilizar funciones de análisis para comprender el comportamiento de los clientes.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: '¿Cómo optimizo mi tienda PrestaShop para mejorar el rendimiento y la velocidad de carga?',
+        description:
+          'Puedes mejorar el rendimiento de tu tienda PrestaShop optimizando imágenes, utilizando cachés, eligiendo un buen proveedor de alojamiento, y configurando adecuadamente las opciones de rendimiento en la administración.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Qué tipo de soporte y actualizaciones puedo esperar al utilizar PrestaShop?',
+        description:
+          'PrestaShop cuenta con una comunidad activa y un equipo de soporte. Puedes acceder a foros, documentación oficial y obtener soporte de la comunidad. Además, PrestaShop lanza regularmente actualizaciones para mejorar la seguridad y añadir nuevas características.',
+        icon: 'tabler:lifebuoy',
+      },
+      {
+        title: '¿Cuáles son las tendencias actuales en el diseño y la funcionalidad de las tiendas PrestaShop?',
+        description:
+          'Las tendencias actuales incluyen un enfoque en la experiencia del usuario (UX), diseños responsivos para dispositivos móviles, métodos de pago innovadores, personalización de productos y la integración de tecnologías emergentes como inteligencia artificial y realidad aumentada.',
+        icon: 'tabler:star',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <!-- <Steps2
+    title="Reach out to us"
+    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+    callToAction={{
+      text: 'Contact us',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: 'contact@support.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call us',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Follow us',
+        description: '@example',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  /> -->
+
+  <!-- BlogLatestPost Widget **************** -->
+<!-- 
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with AstroWind's blog"
+    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-200 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts> -->
+</Layout>
